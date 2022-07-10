@@ -7,11 +7,13 @@
 // - syntax in comment -> typescript can read and check without breaking the JS program w/ TS syntax error
 
 {
-	"include": ["src"], // include : specifies where to look for code to compile
-	"compilerOptions": {
-		"outDir": "build", // specifies where to put the output code
-		"target": "ES6", // specifies the version of JS we want to compile to
-		"lib": ["ES6", "DOM"], // specifies what environment the code is going to run on -> make JS APIs available
-		"allowJs": true
-	}
+  "include": ["src"], // include : specifies where to look for code to compile
+  "compilerOptions": {
+    "outDir": "build", // specifies where to put the output code
+    "target": "ES6", // specifies the version of JS we want to compile to
+    "lib": ["ES6", "DOM"], // specifies what environment the code is going to run on -> make JS APIs available
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "CommonJS"
+  }
 }
