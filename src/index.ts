@@ -1,1 +1,2 @@
-const hello = () => "hi";
+import { init, exit } from "./myPackage";
+init;

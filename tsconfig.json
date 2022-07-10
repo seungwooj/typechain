@@ -1,9 +1,17 @@
+// Typescript allows you to use javascript
+// becuase most of the time users use js lib or pkg
+// so you need to explain to TS the shape and type of js lib or pkgs
+// 1. d.ts (declaration file) : the way to use JS module (in node_modules) in TS file
+// - declaration file에는 call signature (type)만 적는다.
+// 2. JSDoc: the way to use JS file in TS file (TS파일에서 JS파일을 읽어올 때)
+// - syntax in comment -> typescript can read and check without breaking the JS program w/ TS syntax error
+
 {
-  "include": ["src"],
-  "compilerOptions": {
-    "outDir": "build",
-    "target": "ES6",
-    "lib": ["ES6", "DOM"],
-    "allowJs": true
-  }
+	"include": ["src"], // include : specifies where to look for code to compile
+	"compilerOptions": {
+		"outDir": "build", // specifies where to put the output code
+		"target": "ES6", // specifies the version of JS we want to compile to
+		"lib": ["ES6", "DOM"], // specifies what environment the code is going to run on -> make JS APIs available
+		"allowJs": true
+	}
 }
